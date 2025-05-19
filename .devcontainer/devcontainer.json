@@ -8,16 +8,7 @@
         "version": "lts"
     }
   },
-  "portsAttributes": {
-    "8080": {
-      "label": "Java Application",
-      "onAutoForward": "openBrowser"
-    },
-    "3000": {
-      "label": "Node.js Application",
-      "onAutoForward": "openBrowser"
-    }
-  },
+  "forwardPorts": [5713, 8080],
   "customizations": {
     "vscode": {
       "extensions": [
