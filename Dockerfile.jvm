@@ -1,0 +1,25 @@
+FROM openjdk:19-alpine
+
+# Create working dir
+WORKDIR /app
+
+# Install necessary packages
+RUN apk --no-cache add curl busybox-extras tzdata
+
+# Set timezone
+ENV TZ="Asia/Riyadh"
+
+# Copy Quarkus build output
+COPY ./target/quarkus-app/ ./
+
+# Optional permissions (if required)
+RUN chmod -R 777 /app && \
+    chmod -R 777 /etc/ssl/certs/java/cacerts && \
+    chmod -R 777 $JAVA_HOME/lib/security
+
+# Set default port (can override with env)
+ENV PORT=8080
+EXPOSE $PORT
+
+# Run using Quarkus launcher script
+ENTRYPOINT ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseContainerSupport", "-Dquarkus.http.port=${PORT}", "-jar", "quarkus-run.jar"]
