@@ -17,5 +17,16 @@
       "label": "Node.js Application",
       "onAutoForward": "openBrowser"
     }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "alphabotsec.vscode-eclipse-keybindings",
+        "redhat.java",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot"
+      ]
+    }
   }
 }
