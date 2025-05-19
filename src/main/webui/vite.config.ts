@@ -14,7 +14,7 @@ export default defineConfig({
     },
     proxy: {
       '/cem/bff/log-viewer/api': {
-        target: 'http://host.docker.internal:8080',//'http://localhost:8080/cem/bff/log-viewer', // Quarkus backend
+        target: 'http://localhost:8080/cem/bff/log-viewer', // Quarkus backend 'http://host.docker.internal:8080',//
         changeOrigin: true,
         secure: false,
       },
