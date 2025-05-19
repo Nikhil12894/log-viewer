@@ -1,0 +1,15 @@
+// .devcontainer/devcontainer.json
+{
+  "image": "mcr.microsoft.com/devcontainers/java:17-node",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
