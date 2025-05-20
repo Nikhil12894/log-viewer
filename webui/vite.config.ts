@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/cem/bff/log-viewer/', // 👈 important
+  base: '/cem/bff/log-viewer/quinoa', // 👈 important
   plugins: [react()],
   server: {
     // this ensures that the browser opens upon server start

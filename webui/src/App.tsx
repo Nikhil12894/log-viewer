@@ -8,7 +8,7 @@ import MainApp from './MainApp/MainApp';
 function App() {
 
   return (
-    <BrowserRouter basename="/cem/bff/log-viewer">
+    <BrowserRouter basename="/cem/bff/log-viewer/quinoa">
       <Routes>
         <Route path="/" element={<Landing/>} />
         <Route path="/explorer" element={<MainApp  />} />
