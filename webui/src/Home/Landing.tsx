@@ -90,6 +90,9 @@ export default function Landing() {
           <Text mt="sm">
             6. Files are read-only and displayed as a tree view.
           </Text>
+          <Text mt="sm">
+            7. To change the base directory, modify the <strong>baseDir</strong> in the backend config.
+          </Text>
         </Paper>
 
       </Stack>
