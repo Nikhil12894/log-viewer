@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @Path("/api")
-public class GreetingResource {
+public class LogViewerResource {
 
     @Inject
     Vertx vertx;

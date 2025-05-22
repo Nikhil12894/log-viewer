@@ -3,11 +3,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/cem/bff/log-viewer/quinoa', // 👈 important
+  base: '/cem/bff/log-viewer/', // 👈 important
   plugins: [react()],
   server: {
     // this ensures that the browser opens upon server start
-        open: true,
+//         open: true,
     // host: '0.0.0.0',        // 👈 Required for Docker/WSL2
     port: 5173,         // 👈 Port for Vite dev server
     // strictPort: true,

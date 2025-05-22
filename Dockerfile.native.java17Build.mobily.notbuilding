@@ -1,0 +1,20 @@
+FROM registry.access.redhat.com/ubi9/ubi-minimal:9.3
+
+# Install tools and timezone data
+RUN microdnf install -y \
+    curl \
+    tzdata \
+    coreutils \
+    procps-ng \
+ && microdnf clean all
+
+# Set timezone
+ENV TZ=Asia/Riyadh
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+WORKDIR /work/
+COPY target/*-runner /work/application
+RUN chmod +x /work/application
+
+EXPOSE 8080
+ENTRYPOINT ["./application", "-Dquarkus.http.host=0.0.0.0"]
